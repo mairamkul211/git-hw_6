@@ -1,17 +1,17 @@
-function formatDate(date){
-    return date.toLocaleDateString();
-  }
+import CommentDate from './CommentDate';
+import CommentText from './UI/CommentText';
+import './Comment.css'
+import UserInfo from './UserInfo';
 
-function Commenet (props) {
-return(
-    <div className="Commenet">
-    <div className='UserInfo'>
-      <img className='Avata' src={props.author.avatarUrl} alt={props.author.name} />
-      <div className='UserInfo-name'>{props.author.name}</div>
+function Comment(props) {
+  return (
+    <div className="Comment">
+      <UserInfo author={props.author} />
+      <CommentText className="Comment-text">
+      <div>{props.text}</div>
+      <CommentDate date={props.date} />
+      </CommentText>
     </div>
-    <div className='Comment-text'>{props.text}</div>
- </div>
-)
+  );
 }
-
-export default Commenet
+export default Comment;

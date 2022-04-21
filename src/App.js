@@ -1,6 +1,6 @@
 
-import Commenet from './components/Comment';
 import './App.css';
+import Comment from './components/Comment';
 
 
 
@@ -15,11 +15,9 @@ const comment = {
 
 function App() {
   return (
-    <Comment 
-    author={comment.author} 
+    <Comment author={comment.author} 
     text={comment.text}
-    date={comment.date}
-    />
+     date={comment.date}/>
   )
 }
 
